@@ -1,7 +1,7 @@
-variable "instance_count" {
-  description = "Número de instâncias que serão provisionadas"
-  default     = 1
-}
+# variable "instance_count" {
+#  description = "Número de instâncias que serão provisionadas"
+#  default     = 1
+# }
 
 variable "name" {
   description = "Nome da instância"
