@@ -4,11 +4,11 @@
 resource "aws_instance" "main" {
   count = var.instance_count
 
-  ami                  = var.ami
-  instance_type        = var.instance_type
-  user_data            = var.user_data
-  key_name             = var.key_name
-  iam_instance_profile = data.aws_iam_instance_profile.being_used.name
+ # ami                  = var.ami
+ # instance_type        = var.instance_type
+ # user_data            = var.user_data
+ # key_name             = var.key_name
+ iam_instance_profile = data.aws_iam_instance_profile.being_used.name
 
   subnet_id = element(
     distinct(compact(concat([var.subnet_id], var.subnet_ids))),
